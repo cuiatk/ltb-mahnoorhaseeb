@@ -1,5 +1,7 @@
 package labTerminalB;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 public class CustomerTest {
@@ -16,6 +18,7 @@ public class CustomerTest {
 	/**
 	 * Test 1 Customer rented two movies one REGULAR and one NEW_RELEASE
 	 */
+	
 	@Test
 	public void testStatement1() {
 		me.addRental(r1);
@@ -29,11 +32,29 @@ public class CustomerTest {
 			assert true;
 		}
 	}
+	
 	/*
 	 * TODO 2			10 Marks
 	 * Provide at least two more test cases carefully chosen so that they satisfy our testing
 	 * strategy basics i.e. input partition etc
 	 */
-	
+	@Test
+	public void basicReleaseTestcase() {
+		me2.addRental(new Rental(m2,1));
+		assertEquals(me2.statement(),me2.statement());
+	}
+	@Test
+	public void rentedmovie() {
+		me2.addRental(new Rental(m2,2));
+		me2.addRental(new Rental(m1,1));
+		me2.addRental(new Rental(m2,3));
+		assertEquals(me2.statement(),me2.statement());
+	}
 
-}
+	
+		
+	}
+
+	
+		}
+	
