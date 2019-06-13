@@ -3,6 +3,9 @@ package labTerminalB;
 import org.junit.Test;
 
 public class CustomerTest {
+	CustomerTest t=new CustomerTest();
+	
+	
 	Movie m1 = new Movie("Spancer", 0);
 	Movie m2 = new Movie("Speed", 1);
 	Customer me = new Customer("Nadir");
